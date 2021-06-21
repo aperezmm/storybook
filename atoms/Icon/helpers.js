@@ -1,12 +1,12 @@
-const ICONS_ASSETS_PATH = '/icons/';
+const ICONS_ASSETS_PATH = '/icons/'
 
 //Sustantivo
 const iconMap = {
-    rightArrow: 'right-arrow',
-    home : 'home-outline.svg', // FIXME: Add
-};
+  rightArrow: 'right-arrow',
+  home: 'home-outline.svg', // FIXME: Add
+}
 
 //Acción
-export const mapType = (type) =>  `${ICONS_ASSETS_PATH}/${iconMap[type]}.svg`;
+export const mapType = (type) => `${ICONS_ASSETS_PATH}/${iconMap[type]}.svg`
 
-export const mapSize = (size) => null; // TODO: 
+export const mapSize = () => null // TODO: Implement it

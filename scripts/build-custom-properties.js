@@ -1,29 +1,30 @@
-const { choices, decisions } = require("../tokens");
-const fs = require("fs");
+const { choices, decisions } = require('../tokens')
+const fs = require('fs')
 
-const toKebabCase = (string) => //Separar los CamelCase 
-    string.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, "$1-$2").toLowerCase();
+const toKebabCase = (
+  string //Separar los CamelCase
+) => string.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase()
 
 function transformTokens(parentKey, object) {
   //Obtenemos los keys
-  const objectKeys = Object.keys(object);
+  const objectKeys = Object.keys(object)
   return objectKeys.reduce((tokenTransformed, objectKey) => {
     //Es como si fuese un for (se repite)
-    const value = object[objectKey];
-    if (typeof value === 'object'){
+    const value = object[objectKey]
+    if (typeof value === 'object') {
       const customProperty = parentKey
         ? `${parentKey}-${objectKey}`
-        : `${objectKey}`;
+        : `${objectKey}`
       return `${tokenTransformed}
       ${transformTokens(`${toKebabCase(customProperty)}`, value)}
-`;
+`
     }
     //Camino feliz que el valor no fuera un objeto.
     //const customProperty = parentKey ? `--${parentKey}-${objectKey}` : `${parentKey}-${objectKey}`
 
     return `${tokenTransformed}
-    --${parentKey}-${toKebabCase(objectKey)}: ${value};`;
-  }, ""); //Valor inicial es un string
+    --${parentKey}-${toKebabCase(objectKey)}: ${value};`
+  }, '') //Valor inicial es un string
 }
 
 function buildCustomProperties() {
@@ -64,15 +65,18 @@ function buildCustomProperties() {
   //     }, '')
   // }
   //Transformamos los tokens
-  const customProperties = `${transformTokens(null, choices)}${transformTokens(null, decisions)}`;
+  const customProperties = `${transformTokens(null, choices)}${transformTokens(
+    null,
+    decisions
+  )}`
 
-  const data = [":root {", customProperties.trim(), "}"].join('\n');
+  const data = [':root {', customProperties.trim(), '}'].join('\n')
 
-  fs.writeFile("./tokens.css", data, "utf8", function (err) {
+  fs.writeFile('./styles/tokens.css', data, 'utf8', function (err) {
     if (err) {
-      return console.error(err);
+      return console.error(err)
     }
-  });
+  })
 }
 
-buildCustomProperties();
+buildCustomProperties()
