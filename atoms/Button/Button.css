@@ -1,12 +1,22 @@
 
 .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid var(--colors-transparent); /*Evita que salte*/
-    padding: 10px 85px;
+    padding: 10px 20px;
     border-radius: 30px;
     box-shadow: 0px 4px 5px var(--colors-brand-white-lilac);
     cursor: pointer;
     transition: all 0.5s ease; /*Minimiza cambios bruscos*/
     font-size: var(--font-size-2xl);
+    max-width: 300px;
+    white-space: nowrap; /*Determina como se maneja el espacio blanco dentro de un elemento*/
+    /*TODO: Implement min width behaviour */
+}
+
+.is-block{
+    width: 100%;
 }
 
 .button-primary{

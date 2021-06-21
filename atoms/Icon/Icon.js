@@ -1,9 +1,12 @@
 import React from "react";
 //import rightArrow from '../../assets/icons/right-arrow.svg';
-import getIconsList from "./IconList";
+import { mapType } from "./helpers";
+
+
+//TODO: Use the Atom Picture
 const Icon = ({ type }) => 
     <div>
-        <img src={getIconsList(type)}></img>
+        <img src={mapType(type)}></img>
     </div>;
 
 
