@@ -12,7 +12,6 @@
     font-size: var(--font-size-2xl);
     max-width: 300px;
     /*white-space: nowrap; Determina como se maneja el espacio blanco dentro de un elemento*/
-    width: 100%;
     min-width: max-content;
 }
 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --fix",
+    "lint": "eslint .",
     "storybook": "start-storybook -p 6006 -s ./assets",
     "build-custom-properties": "node ./scripts/build-custom-properties",
     "build-storybook": "build-storybook",
@@ -19,7 +19,8 @@
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.1.21",
     "@storybook/addon-links": "^6.2.9",
-    "@storybook/react": "^3.4.12",
+    "@storybook/react": "^6.2.9",
+    "babel-core": "^6.26.3",
     "babel-loader": "^8.2.2",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
