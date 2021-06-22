@@ -1,8 +1,13 @@
 :root {
 --colors-brand-medium-purple: #9879e9;
-    --colors-brand-white: #fff;
+    --colors-brand-mandy: #eb4e58;
     --colors-brand-white-lilac: #e8e8e8;
+    --colors-brand-hint-of-red: #f9f9f9;
+    --colors-brand-romance: #fcfdfd;
     --colors-brand-east-bay: #455970;
+    --colors-brand-regent-gray: #73858c;
+    --colors-brand-loblolly: #b7b7b7;
+    --colors-brand-blue-moon: #eff1d1;
 
     --colors-transparent: transparent;
     --colors-black: #000;
@@ -250,7 +255,7 @@
     --border-radius-none: 0;
     --border-radius-sm: 0.125rem;
     --border-radius-md: 0.25rem;
-    --border-radius-lg: 0.5rem;
+    --border-radius-lg: 1.875rem;
     --border-radius-full: 9999px;
 
       
@@ -264,4 +269,13 @@
 
       
     --colors-primary: #9879e9;
+    --colors-primary-highlight: #eff1d1;
+    --colors-secondary: #eb4e58;
+    --colors-font-base: #455970;
+    --colors-font-muted: #73858c;
+    --colors-font-highlight: #b7b7b7;
+
+      
+    --backgrounds-primary: #f9f9f9;
+    --backgrounds-highlight: #fcfdfd;
 }

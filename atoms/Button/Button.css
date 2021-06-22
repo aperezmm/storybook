@@ -20,9 +20,18 @@
 }
 
 .button-primary{
-    background: var(--colors-brand-medium-purple);
-    color: var(--colors-brand-white);
+    background: var(--colors-primary);
+    color: var(--colors-white);
 }
+
+/* Pequeña implementación del darkmode 
+@media (prefers-color-scheme: dark){
+    :root{
+        --colors-primary: white;
+        --colors-white: black;
+    }
+}
+*/
 
 .button:hover{
     filter: brightness(1.1);
