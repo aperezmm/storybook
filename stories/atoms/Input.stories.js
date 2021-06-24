@@ -6,7 +6,7 @@ export default {
 }
 
 export const Text = () => (
-  <Input type="text" placeholder="Nombres">
+  <Input onChange={() => {}} type="text" placeholder="Nombres">
     Input primary
   </Input>
 )
