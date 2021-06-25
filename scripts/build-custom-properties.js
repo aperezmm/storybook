@@ -11,13 +11,24 @@ function transformTokens(parentKey, object) {
   return objectKeys.reduce((tokenTransformed, objectKey) => {
     //Es como si fuese un for (se repite)
     const value = object[objectKey]
-    if (typeof value === 'object') {
+
+    if (Array.isArray(value)) {
       const customProperty = parentKey
         ? `${parentKey}-${objectKey}`
         : `${objectKey}`
-      return `${tokenTransformed}
-      ${transformTokens(`${toKebabCase(customProperty)}`, value)}
-`
+
+      return `${tokenTransformed}\n\t--${toKebabCase(
+        customProperty
+      )}: ${value.join(', ')};`
+    } else if (typeof value === 'object') {
+      const customProperty = parentKey
+        ? `${parentKey}-${objectKey}`
+        : `${objectKey}`
+
+      return `${tokenTransformed}\n\t${transformTokens(
+        `${toKebabCase(customProperty)}`,
+        value
+      )}`
     }
     //Camino feliz que el valor no fuera un objeto.
     //const customProperty = parentKey ? `--${parentKey}-${objectKey}` : `${parentKey}-${objectKey}`
