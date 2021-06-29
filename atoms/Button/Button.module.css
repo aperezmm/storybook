@@ -1,5 +1,5 @@
 
-.button {
+.button{
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,7 @@
     filter: brightness(0.9);
 }
 
-.button.button-secondary{
+.button-secondary{
     background: transparent;
     color: var(--colors-brand-medium-purple);
     border: 1px solid var(--colors-brand-medium-purple)

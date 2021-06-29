@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import './Spacer.css'
+
+import styles from './Spacer.module.css'
 
 //FIXME: Use token.css intead
 import { choices } from '../../tokens'
@@ -12,8 +13,8 @@ const getSize = (size) => choices.spacing[size]
 //Creamos otra propiedad para poder visualizarlo
 const Horizontal = ({ size, isVisible }) => (
   <div
-    className={classNames('spacer', {
-      'is-visible': isVisible,
+    className={classNames(styles.horizontal, {
+      [styles['is-visible']]: isVisible,
     })}
     style={{
       display: 'block',

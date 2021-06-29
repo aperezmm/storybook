@@ -13,4 +13,13 @@ import Spacer from './layout/Spacer'
 import ButtonIcon from './molecules/ButtonIcon'
 import Dropdown from './molecules/Dropdown'
 
-export { Button, Heading, Icon, Input, Picture, Spacer, ButtonIcon, Dropdown }
+export default {
+  Button,
+  Heading,
+  Icon,
+  Input,
+  Picture,
+  Spacer,
+  ButtonIcon,
+  Dropdown,
+}

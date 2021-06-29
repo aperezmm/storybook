@@ -5,13 +5,13 @@ import { mapSize, mapType } from './helpers'
 import classNames from 'classnames'
 import Picture from '../Picture'
 
-import './Icon.css'
+import styles from './Icon.module.css'
 
 //TODO: Use the Atom Picture
 const Icon = ({ type, size, hasBackground }) => (
   <div
-    className={classNames('icon', {
-      'has-background': hasBackground, //ClassNames permite varias clases, cuando isSolid es true si el icono tiene esa clase
+    className={classNames(styles.icon, {
+      [styles['has-background']]: hasBackground, //ClassNames permite varias clases, cuando isSolid es true si el icono tiene esa clase
     })}
     style={{ width: mapSize(size), height: mapSize(size) }}
   >

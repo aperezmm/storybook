@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { getWidth } from './helpers'
+import styles from './Picture.module.css'
 
-import './Picture.css'
+import './Picture.module.css'
 
 const Picture = ({ src, width }) => (
-  <picture className="picture">
+  <picture className={styles.picture}>
     <img src={src} style={{ maxWidth: getWidth(width) }}></img>
   </picture>
 )

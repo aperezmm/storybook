@@ -1,4 +1,4 @@
-import React from 'react'
+//import 'minireset.css'
 import '../styles/main.css'
 import '../styles/tokens.css'
 

@@ -2,13 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import './Button.css'
+import styles from './Button.module.css'
 
 const Button = ({ type, children, isBlock }) => (
   <button
-    className={classNames('button', {
-      [`button-${type}`]: type,
-      ['is-block']: isBlock && type !== 'tertiary',
+    className={classNames(styles.button, {
+      //Esta nueva sintaxis es Javascript puro
+      [styles[`button-${type}`]]: type,
+      [styles['is-block']]: isBlock && type !== 'tertiary',
     })}
   >
     {children}
@@ -16,7 +17,7 @@ const Button = ({ type, children, isBlock }) => (
 )
 
 Button.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.string.isRequired,
   type: PropTypes.oneOf[('primary', 'secondary', 'tertiary')],
   isBlock: PropTypes.boolean,
 }
