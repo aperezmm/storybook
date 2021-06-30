@@ -16,9 +16,9 @@ const Heading = ({ children, color, size }) => (
 )
 
 Heading.propTypes = {
-  children: PropTypes.node.isRequired,
-  color: PropTypes.oneOf[('primary', 'default')],
-  size: PropTypes.oneOf[('xs', 'sm', 'md')],
+  children: PropTypes.string.isRequired,
+  color: PropTypes.oneOf(['primary', 'default']),
+  size: PropTypes.oneOf(['xs', 'sm', 'md']),
 }
 
 Heading.defaultProps = {

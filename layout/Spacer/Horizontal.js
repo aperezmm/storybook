@@ -1,19 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import { getSize } from './helpers'
 
 import styles from './Spacer.module.css'
-
-//FIXME: Use token.css intead
-import { choices } from '../../tokens'
-//TODO: Move to helper.js
-
-const getSize = (size) => choices.spacing[size]
 
 //Creamos otra propiedad para poder visualizarlo
 const Horizontal = ({ size, isVisible }) => (
   <div
-    className={classNames(styles.horizontal, {
+    className={classNames(styles.spacer, {
       [styles['is-visible']]: isVisible,
     })}
     style={{
@@ -21,12 +16,16 @@ const Horizontal = ({ size, isVisible }) => (
       width: '100%',
       height: getSize(size),
     }}
-  ></div>
+  />
 )
 
 Horizontal.propTypes = {
-  size: PropTypes.number.isRequired,
+  size: PropTypes.string.isRequired,
   isVisible: PropTypes.bool,
+}
+
+Horizontal.defaultProps = {
+  size: 'none',
 }
 
 export default Horizontal

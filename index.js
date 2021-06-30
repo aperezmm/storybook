@@ -1,14 +1,24 @@
 //Archivo para leer cualquier proyecto cuando este publicado
 //Atoms
 export { default as Button } from './atoms/Button'
-export { default as Heading } from './atoms/Heading'
-export { default as Icon } from './atoms/Icon'
-export { default as Input } from './atoms/Input'
-export { default as Picture } from './atoms/Picture'
+import Heading from './atoms/Heading'
+import Icon from './atoms/Icon'
+import Input from './atoms/Input'
+import Picture from './atoms/Picture'
 
 //Layout
-export { default as Spacer } from './layout/Spacer'
+import Spacer from './layout/Spacer'
 
 //Molecules
-export { default as ButtonIcon } from './molecules/ButtonIcon'
-export { default as Dropdown } from './molecules/Dropdown'
+import ButtonIcon from './molecules/ButtonIcon'
+import Dropdown from './molecules/Dropdown'
+
+export default {
+  Heading,
+  Icon,
+  Input,
+  Picture,
+  Spacer,
+  ButtonIcon,
+  Dropdown,
+}

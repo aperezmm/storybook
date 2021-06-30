@@ -19,9 +19,9 @@ Input.defaultProps = {
 }
 
 Input.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  type: PropTypes.oneOf['text'],
+  type: PropTypes.oneOf(['text']),
   value: PropTypes.string,
   placeholder: PropTypes.string,
 }

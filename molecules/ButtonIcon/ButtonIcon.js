@@ -1,21 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Spacer from '../../layout/Spacer'
+import Button from '../../atoms/Button'
 
 import Icon from '../../atoms/Icon'
 //Ofrece una manera dinamica de verificar los componentes
 // npm i --save prop-types
 
 const ButtonIcon = ({ children, type, icon }) => (
-  <button type={type} isBlock={false}>
-    <span style={{ marginRight: 10 }}>{children}</span>{' '}
+  <Button type={type} isBlock={false}>
+    {children}
+    <Spacer.Vertical size="xs"></Spacer.Vertical>
     {/*FIXME: The vertical space */}
     <Icon type={icon} />
-  </button>
+  </Button>
 )
 
 ButtonIcon.propTypes = {
   children: PropTypes.node.isRequired,
-  type: PropTypes.oneOf[('primary', 'secondary', 'tertiary')],
+  type: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
   icon: PropTypes.string.isRequired,
 }
 /*

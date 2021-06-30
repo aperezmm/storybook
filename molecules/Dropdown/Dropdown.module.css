@@ -3,13 +3,13 @@
     position: relative;
 }
 
-.dropdown .icon {
+.dropdown-icon {
     position: absolute;
     right: 1px;
     pointer-events: none; /*Como si el elemento no existiera y el click transpasa */
     /*Posicionar elementos absolutos */
     top: 50%;
-    transform: translateY(-50%);
+    /*transform: translateY(-50%);*/
 }
 
 .dropdown-select {

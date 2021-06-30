@@ -1,15 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import styles from './Spacer.module.css'
 import Horizontal from './Horizontal'
 import Vertical from './Vertical'
+import { getSize } from './helpers'
 
-//FIXME: Use token.css intead
-import { choices } from '../../tokens'
-//TODO: Move to helper.js
-
-const getSize = (size) => choices.spacing[size]
+import styles from './Spacer.module.css'
 
 //Creamos otra propiedad para poder visualizarlo
 const Spacer = ({ size, isVisible }) => (
@@ -22,12 +18,16 @@ const Spacer = ({ size, isVisible }) => (
       width: getSize(size),
       height: getSize(size),
     }}
-  ></div>
+  />
 )
 
 Spacer.propTypes = {
-  size: PropTypes.number.isRequired,
+  size: PropTypes.string,
   isVisible: PropTypes.bool,
+}
+
+Spacer.defaultProps = {
+  size: 'none',
 }
 
 Spacer.Horizontal = Horizontal

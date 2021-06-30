@@ -6,10 +6,14 @@ export default {
   component: Spacer,
 }
 
-export const Default = () => <Spacer size={12} isVisible></Spacer>
-export const Horizontal = () => (
-  <Spacer.Horizontal size={12} isVisible></Spacer.Horizontal>
+export const Zero = () => <Spacer size="none" isVisible></Spacer>
+export const ExtraSmall = () => <Spacer size="xs" isVisible></Spacer>
+export const Small = () => <Spacer size="sm" isVisible></Spacer>
+export const Medium = () => <Spacer size="md" isVisible></Spacer>
+export const Large = () => <Spacer size="lg" isVisible></Spacer>
+export const LargeHorizontal = () => (
+  <Spacer.Horizontal size="lg" isVisible></Spacer.Horizontal>
 )
-export const Vertical = () => (
-  <Spacer.Vertical size={12} isVisible maxHeight={200}></Spacer.Vertical>
+export const LargeVertical = () => (
+  <Spacer.Vertical size="lg" isVisible></Spacer.Vertical>
 )
