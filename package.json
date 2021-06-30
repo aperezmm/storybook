@@ -1,6 +1,6 @@
 {
   "name": "@devperez/components",
-  "version": "0.1.3",
+  "version": "0.2.1",
   "description": "A components library to create apps from zero to production",
   "main": "index.js",
   "scripts": {
