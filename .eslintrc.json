@@ -11,5 +11,6 @@
         "jest": true,
         "commonjs": true,
         "node": true
-    }
+    },
+    "rules": { "react/no-unescaped-entities": 0 }
 }

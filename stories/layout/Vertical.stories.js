@@ -2,14 +2,14 @@ import React from 'react'
 import Spacer from '../../layout/Spacer'
 
 export default {
-  title: 'Layout/Spacer',
+  title: 'Layout/Spacer/Vertical',
   component: Spacer,
   args: {
     isVisible: true,
   },
 }
 
-const Template = (props) => <Spacer {...props} />
+const Template = (props) => <Spacer.Vertical {...props} />
 
 export const Default = Template.bind({})
 

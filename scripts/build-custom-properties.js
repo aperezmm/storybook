@@ -83,7 +83,7 @@ function buildCustomProperties() {
 
   const data = [':root {', customProperties.trim(), '}'].join('\n')
 
-  fs.writeFile('./styles/tokens.css', data, 'utf8', function (err) {
+  fs.writeFile('./styles/globals.css', data, 'utf8', function (err) {
     if (err) {
       return console.error(err)
     }

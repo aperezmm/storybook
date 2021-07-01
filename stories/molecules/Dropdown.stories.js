@@ -4,7 +4,6 @@ import React from 'react'
 export default {
   title: 'Molecules/Dropdown',
   component: Dropdown,
-  argTypes: { onChange: { action: 'changed' } },
 }
 
 export const Default = () => (
